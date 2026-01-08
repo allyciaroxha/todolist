@@ -12,16 +12,8 @@ Projeto Spring Boot com Lombok, compilado com **Java 17**.
    ```
 3. Lombok depende dessa versão; o compilador do Java 21 gera `TypeTag :: UNKNOWN` e quebra o build.
 
-## Como compilar/rodar local
+## Como compilar local
 ```powershell
 mvn clean package
 java -jar target/todolist-1.0.0.jar
-```
-
-## Docker
-A imagem usa um multi-stage build que já executa o Maven com o JDK 17 e produz o JAR usado em tempo de execução.
-
-```powershell
-docker build -t todolist:1.0.0 .
-docker run -p 8080:8080 todolist:1.0.0
 ```
